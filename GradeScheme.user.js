@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  Adds a grading scheme with preset values
 // @author       Daniel Victoriano <victorianowebdesign@gmail.com>
-// @match        https://fiu.instructure.com/courses/274/grading_standards
+// @match        https://fiu.instructure.com/courses/*/grading_standards
 // @grant        none
 // ==/UserScript==
 
@@ -30,7 +30,12 @@
 
     request.onload = () => {
 
-    	if(request.status === 200) { alert('Grading Scheme Added'); }
+    	if(request.status === 200) {
+
+    		alert('Grading Scheme Added');
+    		document.location.reload()
+    	}
+
     	if(request.status !== 200) { alert('There was an error, please try again.'); }
     };
 
