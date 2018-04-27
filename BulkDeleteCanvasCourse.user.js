@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  Bulk deletes modules and module items in a Canvas course.
 // @author       Daniel Victoriano <victoriano518@gmail.com>
-// @include        /https:\/\/fiu\.instructure\.com/courses/\d{1,8}/
+// @include        /https:\/\/fiu\.instructure\.com/courses/\d{1,8}$/
 // @grant        none
 // ==/UserScript==
 
@@ -151,23 +151,29 @@ function makeRequest(url) {
 
 function makeMenu() {
 
-	let header = document.querySelector('.header-bar-right__buttons');
-
+	let header = document.querySelector('#right-side-wrapper .course-options');
 	let button = document.createElement('a');
-	button.setAttribute('class', 'btn btn-danger');
-	button.setAttribute('style', 'margin-right: 5px;');
-	button.innerText = 'Bulk Delete Course';
+	button.setAttribute('class', 'btn button-sidebar-wide btn-danger');
+	button.innerText = 'Delete Course Content';
 
 	return header.appendChild(button);
 }
 
 function init() {
 
-	bulkDeleteModules();
-	bulkDeleteAssignments();
-	bulkDeleteQuizzes();
-	bulkDeletePages();
-	bulkDeleteDiscussions();
+	let confirm = () => {
+
+		return window.confirm('Delete all course content?');
+	}
+
+	if( confirm() ) {
+
+		bulkDeleteModules();
+		bulkDeleteAssignments();
+		bulkDeleteQuizzes();
+		bulkDeletePages();
+		bulkDeleteDiscussions();
+	}
 }
 
 makeMenu().addEventListener( 'click', init );
