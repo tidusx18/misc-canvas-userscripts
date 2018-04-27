@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  Bulk deletes modules and module items in a Canvas course.
 // @author       Daniel Victoriano <victoriano518@gmail.com>
-// @match        https://fiu.instructure.com/courses/*/modules
+// @include        /https:\/\/fiu\.instructure\.com/courses/\d{1,8}/
 // @grant        none
 // ==/UserScript==
 
