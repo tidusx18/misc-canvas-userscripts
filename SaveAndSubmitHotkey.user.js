@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         Canvas UX: Submit/Save Hotkey (Ctrl + s)
 // @namespace    https://github.com/tidusx18
+// @updateURL    https://github.com/tidusx18/misc-canvas-userscripts/raw/master/SaveAndSubmitHotkey.user.js
 // @version      0.0.2
 // @description  Overrides browser default action for "Ctrl + s" hotkey to submit/save the current form/page in Canvas.
 // @match        https://fiu.instructure.com/*edit*
