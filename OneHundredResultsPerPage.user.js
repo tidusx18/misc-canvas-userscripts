@@ -4,8 +4,10 @@
 // @version      0.0.1
 // @description  Loads 100 results per page in Canvas "Pages" section.
 // @author       Daniel Victoriano < victoriano518@gmail.com >
+// @updateURL    https://github.com/tidusx18/misc-canvas-userscripts/raw/master/OneHundredResultsPerPage.user.js
 // @match        https://fiu.instructure.com/courses/*/pages
 // @grant        none
+// @run-at       document-start
 // @noframes
 // ==/UserScript==
 
