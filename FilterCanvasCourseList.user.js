@@ -10,7 +10,7 @@
 
 (function() {
 
-	let rows = document.querySelectorAll('#content table tr');
+	let rows = document.querySelectorAll('#content table tbody tr');
 	let header = document.querySelector('.header-bar');
 	let input = document.createElement('input');
 	let button = document.createElement('button');
