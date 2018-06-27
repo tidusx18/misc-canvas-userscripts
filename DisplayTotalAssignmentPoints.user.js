@@ -5,6 +5,8 @@
 // @description  Displays the total points for all assignments (regardless if included in graded total).
 // @author       Daniel Victoriano <victoriano518@gmail.com>
 // @include      /https:\/\/fiu\.instructure\.com/courses/\d{1,8}\/assignments$/
+// @run-at       document-idle
+// @noframes
 // ==/UserScript==
 
 (function() {
