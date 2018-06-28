@@ -15,7 +15,7 @@
 
         let url = document.location.href.replace('.com', '.com/api/v1');
 
-        fetch(url, { credentials: 'include' })
+        fetch(`${url}?per_page=80`, { credentials: 'include' })
             .then(data => data.text())
             .then(data => {
 
