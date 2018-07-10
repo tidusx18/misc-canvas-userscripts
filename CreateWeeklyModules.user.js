@@ -69,4 +69,4 @@ function makeMenu() {
     return header.insertBefore(button, headerFirstChild);
 }
 
-makeMenu().addEventListener('click', createModules());
+makeMenu().addEventListener('click', createModules;
