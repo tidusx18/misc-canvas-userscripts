@@ -38,6 +38,10 @@ let names = [
 
 function createModules() {
 
+	let userConfirm = confirm('Create 15 Weekly Modules?');
+
+	if(!userConfirm) { return; }
+
     names.forEach(function(name) {
         let queryString = `${endPoint}?_method=${_method}&utf8=${utf8}&authenticity_token=${authenticity_token}&name=${name}&context_module%5Bname%5D=${name}`
 
@@ -69,4 +73,4 @@ function makeMenu() {
     return header.insertBefore(button, headerFirstChild);
 }
 
-makeMenu().addEventListener('click', createModules;
+makeMenu().addEventListener('click', createModules);
