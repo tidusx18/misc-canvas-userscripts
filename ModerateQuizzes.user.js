@@ -20,7 +20,7 @@
             let isPublished = quiz.querySelector('.publish-icon-published ') ? true : false;
             let title = quiz.querySelector('.ig-info .ig-title');
 
-            if (!isPublished) { return; }
+            if (isPublished === false) { return; }
 
             let page = window.open(title.href);
 
