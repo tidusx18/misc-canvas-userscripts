@@ -92,7 +92,7 @@
 	function downloadCSV(csvFile) {
 
 		let blob = new Blob([csvFile], {type: 'text/csv;charset=utf-8'})
-		saveAs(blob, `Pageviews for ${ENV.current_user.display_name}.csv`)
+		saveAs(blob, `Pageviews for ${ENV.CONTEXT_USER_DISPLAY_NAME}.csv`)
 
 	}
 
