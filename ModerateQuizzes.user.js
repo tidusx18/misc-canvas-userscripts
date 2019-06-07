@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Canvas UX: Moderate Quizzes
 // @namespace    http://github.com/tidusx18
-// @version      0.1
+// @version      0.2
 // @description  Opens moderate quiz page for all published quizzes, with the student name provided pre-filtered.
 // @author       Daniel Victoriano <victoriano518@gmail.com>
 // @match        https://fiu.instructure.com/courses/*/quizzes
@@ -20,7 +20,7 @@
             let isPublished = quiz.querySelector('.publish-icon-published ') ? true : false;
             let title = quiz.querySelector('.ig-info .ig-title');
 
-            if (!isPublished) { return; }
+            if (isPublished === false) { return; }
 
             let page = window.open(title.href);
 
@@ -30,7 +30,7 @@
 
     function moderateQuiz(page, studentName) {
 
-    	console.log(studentName);
+        console.log(studentName);
 
         // let timeLimit = page.document.querySelector(' #content .control-group:nth-child(5)').innerText.replace('Time Limit', '').trim();
         let timeLimit = page.ENV.QUIZ.time_limit;
