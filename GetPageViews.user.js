@@ -4,7 +4,7 @@
 // @version      0.0.1
 // @description
 // @author       Daniel Victoriano <victoriano518@gmail.com>
-// @match        https://fiu.instructure.com/accounts/1/users/496
+// @match        https://fiu.instructure.com/accounts/*/users/*
 // @require      https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.0.0/papaparse.min.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js
 // @run-at       default
