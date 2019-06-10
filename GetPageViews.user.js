@@ -14,7 +14,7 @@
 
 (function() {
 
-	let url = 'https://fiu.instructure.com/api/v1/users/496/page_views?per_page=100'
+	let url = `https://fiu.instructure.com/api/v1/users/${ENV.USER_ID}/page_views?per_page=100`
 	let nextURL = ''
 	let pageviews = []
 	let count = 0
