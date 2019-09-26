@@ -55,27 +55,27 @@
 				let json = JSON.parse( res.replace('while(1);', '') )
 				pageviews = pageviews.concat(json)
 				count++
-				if(count > 8) {
+				if(count > 15) { // increase to get more records (1 = 100 recirds)
 					pageviews = pageviews.map( item => {
 						let newOrder = {}
 						newOrder.request_id = item.id
 						newOrder.user_id = item.links.user
 						newOrder.url = item.url
-						newOrder.context_id =item.links.context
-						newOrder.context_type =item.context_type
-						newOrder.asset_id =item.links.asset
-						newOrder.asset_type =item.asset_type
-						newOrder.controller =item.controller
-						newOrder.action =item.action
+						newOrder.context_id = item.links.context
+						newOrder.context_type = item.context_type
+						newOrder.asset_id = item.links.asset
+						newOrder.asset_type = item.asset_type
+						newOrder.controller = item.controller
+						newOrder.action = item.action
 						newOrder.interaction_seconds = item.interaction_seconds
-						newOrder.created_at =item.created_at
+						newOrder.created_at = new Date(item.created_at).toLocaleString().replace(',', ' -')
 						newOrder.user_request = item.user_request
 						newOrder.render_time = item.render_time
-						newOrder.user_agent =item.user_agent
-						newOrder.participated =item.participated
+						newOrder.user_agent = item.user_agent
+						newOrder.participated = item.participated
 						newOrder.account_id = item.links.account
 						newOrder.real_user_id = item.links.real_user
-						newOrder.http_method =item.http_method
+						newOrder.http_method = item.http_method
 						newOrder.remote_ip = item.remote_ip
 						return newOrder
 					})
